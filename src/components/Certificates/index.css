@@ -1,0 +1,45 @@
+.main5 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Dark gradient background */
+    color: white;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+.certificates-container {
+    border: 5px solid blueviolet;
+    height: 430px;
+    width: 600px;
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* To hide overflow */
+    position: relative; /* For animation effect */
+}
+
+.certificate-image {
+    transition: transform 0.5s ease; /* Smooth scale effect */
+    filter: brightness(0.9); /* Slightly dimmed image */
+}
+
+.carousel-item {
+    animation: fade 1s ease-in-out; /* Fade effect for items */
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .certificates-container {
+        height: 240px;
+        width: 330px;
+    }
+}

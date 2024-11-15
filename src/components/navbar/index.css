@@ -1,0 +1,90 @@
+.navbarbg {
+  padding: 20px;
+  border-radius: 30px;
+  background-color: black;
+  border: solid 5px rgba(132, 21, 229, 0.786);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.portfoliotxt {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out; /* Smooth transition */
+}
+
+.portfoliotxt:hover {
+  color: rgba(132, 21, 229, 0.786); /* Change color on hover */
+}
+
+.navbuttons {
+  font-weight: 600;
+  margin: 0 10px;
+  color: white;
+  font-size: 15px;
+  position: relative; /* Enable position for the pseudo-element */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.navbuttons:hover {
+  color: rgba(132, 21, 229, 0.786); /* Change color on hover */
+}
+
+.navbuttons::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Positioning the underline */
+  width: 0;
+  height: 3px;
+  background-color: rgba(132, 21, 229, 0.786); /* Underline color */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.navbuttons:hover::after {
+  width: 100%; /* Expand underline on hover */
+  left: 0; /* Align underline with the text */
+}
+
+.bar {
+  outline: none;
+  border: none;
+}
+
+.barbtn {
+  margin: 15px 0;
+  outline: none;
+  font-size: 30px;
+  color: white;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.barbtn:hover {
+  color: rgba(132, 21, 229, 0.786); /* Change color on hover */
+}
+
+.contactbtn {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 180px;
+  background-color: rgba(132, 21, 229, 0.786);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.contactbtn:hover {
+  background-color: #6c13b4; /* Darker shade on hover */
+  transform: translateY(-2px); /* Raise button slightly on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .navbar-nav {
+      flex-direction: column; /* Stack items in mobile view */
+      align-items: center; /* Center align */
+  }
+}

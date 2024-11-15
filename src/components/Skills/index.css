@@ -1,0 +1,95 @@
+.main4 {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110%;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+    background: black; /* Dark gradient background */
+}
+
+.skillscon {
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card {
+    border: 1.5px solid white;
+    overflow: hidden;
+    margin: 20px; /* Reduced margin for better spacing */
+    height: 220px;
+    width: 220px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    position: relative; /* For absolute positioning of shine effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    background: rgba(25, 240, 5, 0.907); /* Light shine color */
+    opacity: 0; /* Start invisible */
+    border-radius: 25px; /* Same border radius */
+    transition: opacity 0.3s ease; /* Smooth transition for shine */
+    z-index: 0; /* Send to back */
+}
+
+.skill-card:hover::before,
+.skill-card:focus::before {
+    opacity: 1; /* Show shine on hover or focus */
+}
+
+.skill-card:hover {
+    transform: scale(1.08); /* Slightly grow the card */
+    box-shadow: 5px 5px 20px rgba(21, 255, 0, 0.8); /* Glow effect */
+}
+
+.skill-name {
+    font-family: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    z-index: 1; /* Ensure text is on top */
+    position: relative; /* Position relative for z-index */
+}
+
+.skill-icon {
+    margin-top: 45px;
+    font-size: 90px;
+    color: white;
+    z-index: 1; /* Ensure icon is on top */
+    position: relative; /* Position relative for z-index */
+}
+
+.line {
+    border: 1.5px solid white;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .skill-card {
+        border-radius: 10%;
+        height: 60px;
+        width: 60px;
+    }
+    .skill-icon {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    .line {
+        display: none;
+    }
+    .skill-name {
+        font-size: 5px;
+    }
+}

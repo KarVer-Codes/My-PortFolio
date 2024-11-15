@@ -1,0 +1,89 @@
+.main3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #121212; /* Dark background for contrast */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+.twocards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+}
+
+.image-size2 {
+    height: 400px;
+    width: 280px;
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth scale effect */
+}
+
+.image-size2:hover {
+    transform: scale(1.05); /* Scale on hover */
+}
+
+.aboutmedescription {
+    font-family: "Roboto", sans-serif; /* Ensures better font fallback */
+    color: white;
+    font-size: 22px;
+    line-height: 1.6; /* Improves readability */
+}
+
+.nametxt {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #4efa0a;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth */
+}
+
+.quote {
+    font-style: oblique;
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:576px) {
+    .main3 {
+        padding: 20px; /* Adds padding on mobile */
+        height: auto; /* Allows content to dictate height */
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .twocards {
+        flex-direction: column;
+    }
+    .image-size2 {
+        height: 250px;
+        width: 250px;
+    }
+    .nametxt {
+        font-size: 30px;
+    }
+    .aboutmedescription {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .quote {
+        font-size: 14px; /* Smaller quote for mobile */
+    }
+}
