@@ -1,1 +1,2 @@
-Hello Everyone i am using github first time in my life
+Hello Everyone its my first project on github
+
